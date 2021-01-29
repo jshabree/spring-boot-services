@@ -8,7 +8,7 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
 
     // configuration here
 
-    @Autowired
+    @Override
     public void configure(AuthenticationManagerBuilder builder) {
         builder.jdbcAuthentication().dataSource(dataSource).withUser("dave")
         .password("secret").roles("USER");
