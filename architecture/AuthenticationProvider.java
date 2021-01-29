@@ -6,4 +6,7 @@ public interface AuthenticationProvider {
 
     boolean supports(Class<?> authentication);
     // query
+
+    // if Provider doesn't recognize Authentication
+    // instance type, it is skipped
 }
